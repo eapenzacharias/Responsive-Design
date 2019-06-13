@@ -44,7 +44,7 @@ ul a {
     font-size: 12px;
     color: rgb(128, 128, 128);
     line-height: 1.5;
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: none;
 }
 .boxed {
@@ -77,14 +77,43 @@ ul a {
 }
 .category-latest {
     margin: 0;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    margin-right: -3px;
+    padding: 0 0 10px 10px;
     background-color: #fff4f2;
     color: #f42;
+    height: 100px;
 }
 .category-latest h5 {
     margin: 0;
-    padding:10px 0;
+    padding:5px 0;
+    font-size: 13px;
+    font-weight: 400;
+}
+.category-latest span {
+    font-size: 14px;
+    font-weight: 700;
+}
+.category-latest img {
+    width: 100%;
+    height: 100px;
+}
+.category-latest div:nth-child(1){
+    display: inline-block;
+    height: 100%;
+    width: 72%;
+    margin: 0;
+    padding-right: 10px;
+    justify-content: first baseline;
+}
+.category-latest a:nth-child(2) > div{
+    display: inline-block;
+    width: 26%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/KeanuFinal.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .category-related a {
     color: #555;
@@ -112,6 +141,10 @@ ul a {
 }
 .deal-data > span {
     color: #555;
+}
+.description a {
+    color: #aaa;
+    text-decoration: none;
 }
 .past-deal {
     text-decoration: line-through;
@@ -200,14 +233,9 @@ ul a {
     color: #555;
     font-size: 13px;
 }
-.tag {
-    line-height: 2.5;
-    border-bottom: 1px solid #fcc4b8;
-    width: auto;
-    padding: 0 20px 5px 20px;
-    margin: 0 -10px 15px -10px;
+.latest-funding .description {
+    padding: 10px;
 }
-
 .latest-funding > span > span,
 .latest-deals > span > span {
     display: inline-block;
@@ -227,8 +255,16 @@ ul a {
     font-size: 12px;
     color: rgb(128, 128, 128);
     line-height: 1.5;
-    font-weight: 700;
+    font-weight: 400;
 }
+.tag {
+    line-height: 2.5;
+    border-bottom: 1px solid #fcc4b8;
+    width: auto;
+    padding: 0 20px 5px 20px;
+    margin: 0 -10px 10px -10px;
+}
+
 /*--------------------Span-Sizes----------------*/
 .span-1-12 {
     width: 8%;
