@@ -166,7 +166,7 @@ footer {
 /* Categories Start */
 .categories {
   display: block;
-  margin: 4%;
+  margin: 4% auto;
   max-width: 1100px;
   width: 95%;
   .categories-container {
@@ -410,7 +410,9 @@ footer {
 /* Feature Articles End */
 /* Latest Deals Start */
 .latest-deals {
-  margin: 4%;
+  margin: 4% auto;
+  width: 95%;
+  max-width: 1100px;
   h2 {
     margin-bottom: 5%;
     text-align: left;
@@ -478,7 +480,9 @@ footer {
 /* Latest Deals End */
 /* Latest Funding Start */
 .latest-funding {
-  margin: 4%;
+  margin: 4% auto;
+  width: 95%;
+  max-width: 1100px;
   & > span {
     & > span {
       /* Grabs Both Title and Options of Latest Funding */
@@ -582,7 +586,9 @@ footer {
                        "news5 news6 news7 news8";
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto repeat(2, 1fr);
-  margin: 4%;
+  margin: 4% auto;
+  width: 95%;
+  max-width: 1100px;
   /* Containers Order Declaration */
   h2 {
     grid-area: title;
@@ -655,3 +661,50 @@ footer {
   }
 }
 /* Latest News End */
+/* Responsive */
+@media only screen and (max-width: 900px) {
+  .wrapper {
+      justify-content: space-around;
+  }
+
+}
+@media only screen and (max-width: 750px) {
+  .span-4-12,
+  .span-6-12,
+  .span-8-12,
+  .span-10-12 {
+      width: 95vw !important;
+  }
+  .span-3-12{
+      width: 45vw !important;
+  } 
+  .latest-news{
+    margin-bottom: 60px !important;
+  }
+  .categories{
+    margin-bottom: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .span-3-12,
+  .span-4-12,
+  .span-6-12,
+  .span-8-12,
+  .span-10-12 {
+      width: 100vw !important;
+  } 
+  .wrapper {
+      display: inline-block !important;
+  } 
+  .latest-news{
+    margin-bottom:0 !important;
+  }
+  .categories{
+      margin-bottom:400px !important;
+  }
+  .latest-deals {
+    margin-bottom: 250px !important;
+  }
+}
+

@@ -211,7 +211,7 @@ footer .footer-legal p a img {
 /* Categories Start */
 .categories {
   display: block;
-  margin: 4%;
+  margin: 4% auto;
   max-width: 1100px;
   width: 95%;
 }
@@ -386,7 +386,7 @@ footer .footer-legal p a img {
   display: grid;
   grid-column-gap: 0.6%;
   grid-row-gap: 2%;
-      grid-template-areas: "main main main main side1 side1" "main main main main side2 side2";
+      grid-template-areas: "main main main main side1 side1" "main main main main side2 side2";
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: (1fr)[2];
@@ -522,7 +522,9 @@ footer .footer-legal p a img {
 /* Feature Articles End */
 /* Latest Deals Start */
 .latest-deals {
-  margin: 4%;
+  margin: 4% auto;
+  width: 95%;
+  max-width: 1100px;
 }
 
 .latest-deals h2 {
@@ -612,7 +614,9 @@ footer .footer-legal p a img {
 /* Latest Deals End */
 /* Latest Funding Start */
 .latest-funding {
-  margin: 4%;
+  margin: 4% auto;
+  width: 95%;
+  max-width: 1100px;
 }
 
 .latest-funding > span > span {
@@ -733,12 +737,14 @@ footer .footer-legal p a img {
   display: -ms-grid;
   display: grid;
   grid-gap: 3%;
-      grid-template-areas: "title . . ." "news1 news2 news3 news4" "news5 news6 news7 news8";
+      grid-template-areas: "title . . ." "news1 news2 news3 news4" "news5 news6 news7 news8";
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: auto (1fr)[2];
       grid-template-rows: auto repeat(2, 1fr);
-  margin: 4%;
+  margin: 4% auto;
+  width: 95%;
+  max-width: 1100px;
   /* Containers Order Declaration */
   /* End of Container Declaration */
 }
@@ -850,4 +856,51 @@ footer .footer-legal p a img {
 }
 
 /* Latest News End */
+/* Responsive */
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .span-4-12,
+  .span-6-12,
+  .span-8-12,
+  .span-10-12 {
+    width: 95vw !important;
+  }
+  .span-3-12 {
+    width: 45vw !important;
+  }
+  .latest-news {
+    margin-bottom: 60px !important;
+  }
+  .categories {
+    margin-bottom: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .span-3-12,
+  .span-4-12,
+  .span-6-12,
+  .span-8-12,
+  .span-10-12 {
+    width: 100vw !important;
+  }
+  .wrapper {
+    display: inline-block !important;
+  }
+  .latest-news {
+    margin-bottom: 0 !important;
+  }
+  .categories {
+    margin-bottom: 400px !important;
+  }
+  .latest-deals {
+    margin-bottom: 250px !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */
