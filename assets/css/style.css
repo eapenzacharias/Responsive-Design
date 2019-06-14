@@ -140,6 +140,9 @@ a {
 .deal-data h5 > a{
     color: black;
 }
+.deal-data h5 > a:hover{
+    color: #f42;
+}
 .description a {
     color: #aaa;
     text-decoration: none;
