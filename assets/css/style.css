@@ -16,6 +16,7 @@ body {
 
 h3:hover {
   color: black;
+  cursor: pointer;
 }
 
 /* General Styles End */
@@ -347,7 +348,7 @@ nav .search-bar .fa-search {
   display: grid;
   grid-column-gap: 0.6%;
   grid-row-gap: 2%;
-      grid-template-areas: "main main main main side1 side1" "main main main main side2 side2";
+      grid-template-areas: "main main main main side1 side1" "main main main main side2 side2";
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: (1fr)[2];
@@ -358,12 +359,17 @@ nav .search-bar .fa-search {
   width: auto;
 }
 
-.feature-articles [class*="side"] .content {
+.feature-articles a {
+  color: white;
+}
+
+.feature-articles [class^="side"] .content {
   margin: 0 !important;
 }
 
-.feature-articles a {
-  color: white;
+.feature-articles [class^="side"] h3 {
+  font-size: 1.75rem !important;
+  margin: 2.5% !important;
 }
 
 .feature-articles .content {
@@ -383,34 +389,6 @@ nav .search-bar .fa-search {
 .feature-articles .content .feature.category {
   font-size: 0.85rem;
   text-transform: uppercase;
-}
-
-.feature-articles .content .main-feature {
-  background-image: url("../img/cover-gradient.png"), url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/header-image-damn-it-feels-good-796x417.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: main;
-  position: relative;
-}
-
-.feature-articles .content .main-feature header {
-  padding: 2.5%;
-}
-
-.feature-articles .content .main-feature header img {
-  margin-top: 1%;
-  width: 50%;
-}
-
-.feature-articles .content .main-feature header span {
-  color: white;
-  float: right;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.85rem;
 }
 
 .feature-articles .content .metadata {
@@ -436,21 +414,52 @@ nav .search-bar .fa-search {
   width: 100%;
 }
 
-.feature-articles .content .metadata ul li a {
+.feature-articles .content .metadata ul a {
   color: inherit;
   font-family: inherit;
   font-style: none;
 }
 
-.feature-articles .content .metadata ul li a:hover {
+.feature-articles .content .metadata ul a:hover {
   color: white;
 }
 
-.feature-articles .content .metadata ul li a i {
+.feature-articles .content .metadata ul li {
+  padding-right: 2%;
+}
+
+.feature-articles .content .metadata ul li i {
   font-size: inherit;
 }
 
-.feature-articles .content .side1-feature {
+.feature-articles .main-feature {
+  background-image: url("../img/cover-gradient.png"), url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/header-image-damn-it-feels-good-796x417.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: main;
+  position: relative;
+}
+
+.feature-articles .main-feature header {
+  padding: 2.5%;
+}
+
+.feature-articles .main-feature header img {
+  width: 50%;
+}
+
+.feature-articles .main-feature header span {
+  color: white;
+  float: right;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+.feature-articles .side1-feature {
   background-image: url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/mcafeecryptojack-796x448.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -461,7 +470,7 @@ nav .search-bar .fa-search {
   position: relative;
 }
 
-.feature-articles .content .side2-feature {
+.feature-articles .side2-feature {
   background-image: url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/Beats-796x417.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -470,6 +479,18 @@ nav .search-bar .fa-search {
   -ms-grid-column-span: 2;
   grid-area: side2;
   position: relative;
+}
+
+.side1-feature h4,
+.side2-feature h4 {
+  font-size: 1.75rem;
+  margin: 2.5%;
+}
+
+.side1-feature h4:hover,
+.side2-feature h4:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .side1-feature h4,
@@ -619,13 +640,13 @@ nav .search-bar .fa-search {
 }
 
 .span-3-12 {
-  min-width: 230px;
-  width: 24.25%;
+  min-width: 220px;
+  width: 22.25%;
 }
 
 .span-4-12 {
-  min-width: 330px;
-  width: 32.66%;
+  min-width: 300px;
+  width: 30.66%;
 }
 
 .span-6-12 {
@@ -665,7 +686,7 @@ nav .search-bar .fa-search {
 
 [class*='span-'] {
   float: left;
-  margin-bottom: 1%;
+  margin-bottom: 0 1% 1% 1%;
 }
 
 /*---------------------------------------------------------------------------*/
