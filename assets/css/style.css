@@ -43,8 +43,25 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 4;
+}
+
+nav .hidden-logo {
+  /* Hidden Logo */
+  background: -webkit-gradient(linear, left top, right bottom, from(#c09), color-stop(85%, #f42));
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+  display: none;
+  float: left;
+  height: 100%;
+  padding: 0 3%;
+}
+
+nav .hidden-logo img {
+  /* Logo img Itself */
+  margin-top: 25%;
+  height: 16px;
+  width: 66px;
 }
 
 nav ul {
@@ -59,7 +76,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 40%;
+  width: 40vw;
 }
 
 nav ul li {
@@ -93,9 +110,11 @@ nav ul li:nth-child(1) img {
 }
 
 nav .search-bar {
-  border-left: 1px solid #aaaaaa40;
+  border: 1px solid #aaaaaa40;
   float: right;
-  padding: 1% 1.5%;
+  font-size: 1em;
+  padding: 15px;
+  width: 20px;
 }
 
 nav .search-bar:hover {
@@ -103,8 +122,13 @@ nav .search-bar:hover {
   cursor: pointer;
 }
 
-nav .search-bar .fa-search {
-  font-size: 1rem;
+nav .search-bar.hidden-menu {
+  /* Hidden Menu */
+  display: none;
+}
+
+nav .search-bar.hidden-menu .fa-bars {
+  color: red;
 }
 
 /* Navbar End */
@@ -386,7 +410,7 @@ footer .footer-legal p a img {
   display: grid;
   grid-column-gap: 0.6%;
   grid-row-gap: 2%;
-      grid-template-areas: "main main main main side1 side1" "main main main main side2 side2";
+      grid-template-areas: "main main main main side1 side1" "main main main main side2 side2";
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: (1fr)[2];
@@ -737,7 +761,7 @@ footer .footer-legal p a img {
   display: -ms-grid;
   display: grid;
   grid-gap: 3%;
-      grid-template-areas: "title . . ." "news1 news2 news3 news4" "news5 news6 news7 news8";
+      grid-template-areas: "title . . ." "news1 news2 news3 news4" "news5 news6 news7 news8";
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: auto (1fr)[2];
@@ -865,6 +889,18 @@ footer .footer-legal p a img {
 }
 
 @media only screen and (max-width: 750px) {
+  nav {
+    display: inline-block;
+  }
+  nav div:nth-of-type(1) {
+    display: block !important;
+  }
+  nav ul {
+    display: none !important;
+  }
+  nav .hidden-menu {
+    display: block !important;
+  }
   .span-4-12,
   .span-6-12,
   .span-8-12,
