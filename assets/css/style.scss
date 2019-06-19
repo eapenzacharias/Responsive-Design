@@ -1,0 +1,739 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General Styles Start */
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+h3:hover {
+  color: black;
+  cursor: pointer;
+}
+/* General Styles End */
+/* Footer Start */
+footer {
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+  .footer-contacts {
+    background: #131313;
+    padding: 3em 0 2em 0;
+    .social-icons {
+      ul {
+        align-items: center;
+        display: inline-flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0 0 1.5em 0;
+        padding: 0;
+        width: 30%;
+        li {
+          background-color: #333;
+          border: 2px solid #333;
+          border-radius: 50%;
+          height: 38px;
+          width: 38px;
+          &:hover {
+            background-color: black;
+          }
+          a {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 7px;
+            display: block;
+          }
+        }
+      }
+    }
+    .page-contact {
+      ul {
+        align-items: center;
+        display: inline-flex;
+        justify-content: space-around;
+        list-style: none;
+        margin: 1em 0 0 0;
+        padding: 0;
+        width: 30%;
+        li {
+          margin: 0 0.5rem;
+          a {
+            color: #aaa;
+            font-size: 0.75rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-legal {
+    background: black;
+    padding: 3em 0;
+    width: 100%;
+    p {
+      align-items: center;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 0.8rem;
+      margin: 0;
+      width: auto;
+      a {
+        img {
+          /* Grabs Footer's Logos */
+          width: 66px;
+        }
+      }
+    }
+  }
+}
+/* Footer End */
+/* Navbar Start */
+nav {
+  background: white;
+  box-shadow: 0 1px 25px #b1b1b1;
+  color: #aaa;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  ul {
+    align-items: center;
+    display: inherit;
+    font-size: 0.85rem;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    li {
+      padding: 1% 3.5%;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      width: fit-content;
+      &:hover {
+        color: #3f3f3f;
+        cursor: pointer;
+      }
+      &:nth-child(1) {
+        /* Logo Container Element */
+        background: linear-gradient(to bottom right, #c09, #f42 85%);
+        height: 100%;
+        padding: 0 3%;
+        img {
+          /* Logo img Itself */
+          margin-top: 25%;
+          height: 16px;
+          width: 66px;
+        }
+      }
+    }
+  }
+  .search-bar {
+    border-left: 1px solid #aaa 40;
+    float: right;
+    padding: 1% 1.5%;
+    &:hover {
+      color: #3f3f3f;
+      cursor: pointer;
+    }
+    &.menu {
+      color: #ff4422;
+      display: none;
+    }
+    .fa-search {
+      font-size: 1rem;
+    }
+  }
+}
+/* Navbar End */
+
+/* Class Styles Start */
+.author {
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+}
+.boxed {
+  margin: 10px auto;
+  width: 95%;
+  max-width: 1100px;
+  display: block;
+}
+.categories {
+  &.author {
+    &:hover {
+      color: rgb(206, 206, 206)
+    }
+  }
+}
+.category-article {
+  padding: 35% 10px 10px 10px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 8px;
+  margin: 0;
+  & > a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-transform: uppercase;
+  }
+  h4 {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+}
+.category-latest {
+  margin: 0;
+  margin-right: -3px;
+  padding: 0 0 10px 10px;
+  background-color: #fff4f2;
+  color: #f42;
+  height: 100px;
+  a {
+    &:nth-child(2) {
+      & > div {
+        display: inline-block;
+        width: 26%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/KeanuFinal.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+  div {
+    &:nth-child(1) {
+      display: inline-block;
+      height: 100%;
+      width: 72%;
+      margin: 0;
+      padding-right: 10px;
+      justify-content: first baseline;
+    }
+  }
+  h5 {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  img {
+    width: 100%;
+    height: 100px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.category-related {
+  a {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  ul {
+    list-style: none;
+    li {
+      border-bottom: 1px solid #eeeeee;
+      margin-bottom: 5px;
+      &::before {
+        content: "\2022";
+        color: #f42;
+        font-weight: 700;
+        display: inline-block;
+        width: 1.5em;
+        margin-left: -1.5em;
+      }
+    }
+  }
+}
+.deal {
+  & > a {
+    & > img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+.deal-data {
+  & > span {
+    color: #555555;
+  }
+  h5 {
+    & > a {
+      color: black;
+      &:hover {
+        color: #ff4422;
+      }
+    }
+  }
+}
+.description {
+  a {
+    color: #aaa;
+    text-decoration: none;
+  }
+}
+/* Feature Articles Start */
+.feature-articles {
+  display: grid;
+  grid-column-gap: 0.6%;
+  grid-row-gap: 2%;
+  grid-template-areas: "main main main main side1 side1"
+                       "main main main main side2 side2";
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0.6%;
+  padding-top: 5%;
+  height: 75vh;
+  width: auto;
+  a {
+    color: white;
+  }
+  [class^="side"] {
+    .content {
+      margin: 0 !important;
+    }
+    h3 {
+      font-size: 1.75rem !important;
+      margin: 2.5% !important;
+    }
+  }
+  .content {
+    bottom: 4px;
+    color: white;
+    margin: 2.5%;
+    position: absolute;
+    width: 100%;
+    h3 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    .feature.category {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+    .metadata {
+      /* Grabs the Image's Metadata */
+      color: #ffffff7e;
+      font-size: 0.7rem;
+      ul {
+        align-items: center;
+        display: inline-flex;
+        font-family: Helvetica, Arial, sans-serif;
+        justify-content: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        a {
+          color: inherit;
+          font-family: inherit;
+          font-style: none;
+          &:hover {
+            color: white;
+          }
+        }
+        li {
+          padding-right: 2%;
+          i {
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+  .main-feature {
+    background-image: url("../img/cover-gradient.png"), url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/header-image-damn-it-feels-good-796x417.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-area: main;
+    position: relative;
+    header {
+    padding: 2.5%;
+      img {
+        width: 50%;
+      }
+      span {
+        color: white;
+        float: right;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.85rem;
+      }
+    }
+  }
+  .side1-feature {
+    background-image: url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/mcafeecryptojack-796x448.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-area: side1;
+    position: relative;
+  }
+  .side2-feature {
+    background-image: url("../img/image-gradient.png"), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/Beats-796x417.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-area: side2;
+    position: relative;
+  }
+}
+.side1-feature h4,
+.side2-feature h4 {
+  font-size: 1.75rem;
+  margin: 2.5%;
+  &:hover {
+    color: black;
+    cursor: pointer;
+  }
+}
+.side1-feature h4,
+.side2-feature h4 {
+  font-size: 1.75rem;
+  margin: 2.5%;
+}
+/* Feature Articles End */
+
+.past-deal {
+  color: rgb(124, 124, 124);
+  font-size: 13.5px;
+  padding-right: 10px;
+  text-decoration: line-through;
+}
+.latest-news {
+  &.author {
+    a {
+      &:hover {
+        color: rgb(10, 10, 10)
+      }
+    }
+  }
+  figure {
+    margin: 0 0 10px 0;
+  }
+  h3 {
+    text-align: left;
+  }
+  h4 {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 7px 0;
+  }
+  img {
+    max-height: 135px;
+    width: 100%;
+  }
+}
+.latest-funding {
+  h4 {
+    background-color: #ff4422;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+    padding: 10.6px 10px 10.6px 35%;
+    width: 100%;
+  }
+  p {
+    background-color: #fff4f2;
+    color: #555;
+    font-size: 14px;
+    height: 35px;
+    margin: 0;
+    padding: 10.6px 10px 52px 35%;
+    width: 100%;
+    & > span {
+      color: black;
+      font-weight: 800;
+      line-height: 1.8;
+    }
+  }
+  .description {
+    padding: 10px;
+  }
+  .header {
+    z-index: 1;
+  }
+  .meta-data {
+    background-color: #fffaf8;
+    color: #555;
+    font-size: 13px;
+    margin: 0;
+    padding: 10px;
+  }
+  .span-3-12 {
+    & > div {
+      &:nth-child(1) {
+        left: 15px;
+        position: relative;
+        top: 80px;
+        z-index: 2;
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+.latest-funding>span>span,
+.latest-deals>span>span {
+  display: inline-block;
+  width: 49.5%;
+}
+.latest-funding>span span:nth-child(2),
+.latest-deals>span span:nth-child(2) {
+  color: #f42;
+  text-align: right;
+}
+.latest-funding>span>span>a,
+.latest-deals>span>span>a {
+  color: #f42;
+  text-decoration: none;
+}
+.latest-news h3,
+.latest-funding h3,
+.categories h3,
+.latest-deals h3 {
+  color: #f42;
+  font-family: 'Oswald', sans-serif;
+  font-style: bold;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: left;
+}
+.publish-time {
+  color: rgb(128, 128, 128);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.tag {
+  border-bottom: 1px solid #fcc4b8;
+  line-height: 2.5;
+  margin: 0 -10px 10px -10px;
+  padding: 0 20px 5px 20px;
+  width: auto;
+}
+
+/*--------------------Span-Sizes----------------*/
+.span-1-12 {
+  min-width: 83px;
+  width: 8%;
+}
+.span-2-12 {
+  min-width: 165px;
+  width: 15.83%;
+}
+.span-3-12 {
+  min-width: 220px;
+  width: 22.25%;
+}
+.span-4-12 {
+  min-width: 300px;
+  width: 30.66%;
+}
+.span-6-12 {
+  min-width: 495px;
+  width: 49.5%;
+}
+.span-8-12 {
+  min-width: 660px;
+  width: 66%;
+}
+.span-10-12 {
+  min-width: 835px;
+  width: 82.5;
+}
+.wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-gap: 1%;
+  justify-content: flex-start;
+  margin: 0 0 50px 0;
+  padding: 0;
+  position: block;
+  width: 100%;
+}
+[class*='span-'] {
+  float: left;
+  margin: 0 1% 1% 1%;
+}
+/*---------------------------------------------------------------------------*/
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  .wrapper {
+      justify-content: space-around;
+  }
+  .feature-articles {
+    display: inline-flex ;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    grid-gap: 1%;
+    width: 100% ;
+
+  }
+  .main-feature {
+    width: 100% ;
+    display: block;
+  }
+  .side1-feature,
+  .side2-feature {
+    width: 49% ;
+    display: block ;
+  }
+  .feature-articles .main-feature header img {
+      margin-top: 5%;
+      width: 30%;
+  }
+  .feature-articles .content h3 {
+      font-size: 3rem;
+  }
+  footer .footer-contacts ul {
+      width: 45% !important;
+  }
+
+
+}
+@media only screen and (max-width: 750px) {
+  .span-4-12,
+  .span-6-12,
+  .span-8-12,
+  .span-10-12 {
+      width: 100%;
+  }
+  .span-3-12{
+      width: 49%;
+  }
+  .latest-news{
+      margin-bottom: 60px;
+  }
+  .categories{
+      margin-bottom: 400px;
+  }
+  .feature-articles {
+      display: inline-flex ;
+      flex-direction: row ;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      grid-gap: 1%;
+      width: 100% ;
+
+    }
+    .main-feature {
+      width: 100% ;
+      display: block;
+    }
+    .side1-feature,
+    .side2-feature {
+      width: 100% ;
+      display: block ;
+    }
+  .feature-articles .main-feature header img {
+      margin: 4% 0;
+      width: 30%;
+  }
+  .feature-articles .content h3 {
+      font-size: 2.5rem;
+      margin: 0 2% 0 0;
+  }
+  .feature-articles [class*="side"] h4 {
+      font-size: 1.5rem !important;
+      margin: 2.5% !important;
+  }
+  footer .footer-contacts ul {
+      width: 75% !important;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  nav ul li{
+      display: none;
+  }
+  nav ul li:nth-child(1){
+      display: inline-flex;
+  }
+  nav .search-bar.menu{
+      display: flex;
+      float: right;
+  }
+  nav ul {
+      width: 80%;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .categories{
+      margin-bottom:0;
+  }
+  .feature-articles {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0 ;
+    width: 100%;
+    position: block;
+    .content {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+    .main-feature {
+      header {
+        img {
+          margin: 10% 0 8% 0;
+          width: 30%;
+        }
+      }
+    }
+  }
+  footer {
+    .footer-contacts {
+      ul {
+        width: 100% !important;
+      }
+    }
+  }
+  .latest-news {
+    margin-bottom:0;
+  }
+  .main-feature {
+    width: 100%;
+  }
+  .side1-feature,
+  .side2-feature {
+    width: 100%;
+  }
+  .span-3-12,
+  .span-4-12,
+  .span-6-12,
+  .span-8-12,
+  .span-10-12 {
+      width: 100%;
+  }
+  .wrapper {
+    display: inline-block;
+  }
+}
